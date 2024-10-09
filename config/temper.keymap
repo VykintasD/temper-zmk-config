@@ -21,7 +21,7 @@
 
         tri_layer {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 
@@ -134,10 +134,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                   &kp F             &kp P              &kp B    &kp J  &kp L              &kp U         &kp Y            &kp KP_EQUAL
-&hrm LEFT_WIN A  &hrm LEFT_ALT R         &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E  &hrm LEFT_ALT I  &hrm LEFT_WIN O
-&kp Z            &kp X                   &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi   &dot_colon       &kp SLASH
-&none            &layer_tap 3 BACKSPACE  &layer_tap 1 TAB                                                        &kp ENTER     &kp SPACE        &super_bspc
+&kp Q            &kp W                   &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y            &kp KP_EQUAL
+&hrm LEFT_WIN A  &hrm LEFT_ALT R         &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I  &hrm LEFT_WIN O
+&kp Z            &kp X                   &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi         &dot_colon       &kp SLASH
+&none            &layer_tap 4 BACKSPACE  &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &kp SPACE        &super_bspc
             >;
         };
 
@@ -156,6 +156,15 @@
 &kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &none       &kp LEFT    &kp DOWN      &kp RIGHT    &kp PAGE_UP
 &trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &kp DELETE  &kp K_COPY  &kp K_CUT     &kp K_PASTE  &kp PAGE_DOWN
 &trans        &kp BACKSPACE  &kp TAB                                                             &trans        &trans       &trans
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+&trans     &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &kp GRAVE  &kp SINGLE_QUOTE
+&kp AT     &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp LSHFT  &kp LCTRL      &kp LALT   &kp LEFT_WIN
+&kp CARET  &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp SEMI
+&trans     &kp BACKSPACE  &kp TAB                                                                                    &trans         &trans     &trans
             >;
         };
 
