@@ -20,8 +20,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -90,6 +90,25 @@
 
             mods = <(MOD_LSFT)>;
         };
+
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
+        };
+
+        layer_tap: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
@@ -97,19 +116,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W          &kp F    &kp P   &kp B    &kp J  &kp L  &kp U        &kp Y       &kp KP_EQUAL
-&kp A  &kp R          &kp S    &trans  &kp G    &kp M  &kp N  &kp E        &kp I       &kp O
-&kp Z  &kp X          &kp C    &kp D   &kp V    &kp K  &kp H  &comma_semi  &dot_colon  &kp SLASH
-&none  &kp BACKSPACE  &kp TAB                                 &kp ENTER    &kp SPACE   &super_bspc
-            >;
-        };
-
-        num1 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                                    &trans  &trans  &trans
+&kp Q            &kp W                   &kp F             &kp P              &kp B    &kp J  &kp L              &kp U         &kp Y            &kp KP_EQUAL
+&hrm LEFT_WIN A  &hrm LEFT_ALT R         &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E  &hrm LEFT_ALT I  &hrm LEFT_WIN O
+&kp Z            &kp X                   &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi   &dot_colon       &kp SLASH
+&none            &layer_tap 3 BACKSPACE  &layer_tap 1 TAB                                                        &kp ENTER     &kp SPACE        &super_bspc
             >;
         };
 
@@ -124,10 +134,10 @@
 
         nav_layer {
             bindings = <
-&trans     &trans     &trans    &trans    &trans     &trans    &kp HOME  &kp END  &kp TAB    &super_bspc
-&sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &gresc
-&trans     &kp DEL    &trans    &trans    &trans     &trans    &kp RET   &trans   &trans     &trans
-&trans     &trans     &trans                                             &trans   &trans     &trans
+&trans        &trans         &kp ENTER        &trans          &trans     &trans      &kp HOME    &kp UP_ARROW  &kp END      &super_bspc
+&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &kp DELETE  &kp LEFT    &kp DOWN      &kp RIGHT    &kp PAGE_UP
+&trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &trans      &kp K_COPY  &kp K_CUT     &kp K_PASTE  &kp PAGE_DOWN
+&trans        &kp BACKSPACE  &kp TAB                                                             &trans        &trans       &trans
             >;
         };
 
