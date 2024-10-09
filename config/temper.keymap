@@ -5,9 +5,7 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
 #define QWERTY 1
@@ -134,10 +132,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W                   &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y            &kp KP_EQUAL
-&hrm LEFT_WIN A  &hrm LEFT_ALT R         &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I  &hrm LEFT_WIN O
-&kp Z            &kp X                   &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi         &dot_colon       &kp SLASH
-&none            &layer_tap 4 BACKSPACE  &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &kp SPACE        &super_bspc
+&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &kp KP_EQUAL
+&hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
+&kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi         &dot_colon          &kp SLASH
+&caps_word       &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &super_bspc
             >;
         };
 
@@ -161,19 +159,10 @@
 
         sym_layer {
             bindings = <
-&trans     &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &kp GRAVE  &kp SINGLE_QUOTE
-&kp AT     &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp LSHFT  &kp LCTRL      &kp LALT   &kp LEFT_WIN
-&kp CARET  &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp SEMI
-&trans     &kp BACKSPACE  &kp TAB                                                                                    &trans         &trans     &trans
-            >;
-        };
-
-        fun_layer {
-            bindings = <
-&tog 0        &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&bt BT_CLR    &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F10
-&trans        &trans        &trans                                                      &trans  &trans  &trans
+&kp BACKSLASH  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &kp GRAVE  &kp SINGLE_QUOTE
+&kp AT         &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp LSHFT  &kp LCTRL      &kp LALT   &kp LEFT_WIN
+&kp CARET      &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp SEMI
+&trans         &kp BACKSPACE  &kp TAB                                                                                    &trans         &trans     &trans
             >;
         };
     };
