@@ -97,7 +97,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
+            quick-tap-ms = <100>;
         };
 
         layer_tap: layer_tap {
@@ -107,7 +108,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
         };
 
         num_3_period: num_3_period {
