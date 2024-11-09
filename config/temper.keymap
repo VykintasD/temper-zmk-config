@@ -138,16 +138,16 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &kp EQUAL
+&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &caps_word
 &hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
 &kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &kp COMMA           &kp PERIOD          &kp SLASH
-&caps_word       &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &super_bspc
+&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &none
             >;
         };
 
         num_layer {
             bindings = <
-&none         &none         &kp ENTER  &kp BACKSPACE   &none    &kp MINUS   &kp N7  &kp N8        &kp N9         &kp EQUAL
+&none         &none         &kp ENTER  &kp BACKSPACE   &none    &kp MINUS   &kp N7  &kp N8        &kp N9         &none
 &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &kp PLUS    &kp N4  &kp N5        &kp N6         &kp ASTERISK
 &amps_morph   &none         &none      &none           &none    &kp DELETE  &kp N1  &num_2_comma  &num_3_period  &kp SLASH
 &trans        &trans        &trans                                                  &kp ENTER     &kp SPACE      &kp NUMBER_0
@@ -165,9 +165,9 @@
 
         sym_layer {
             bindings = <
-&kp BACKSLASH  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &kp GRAVE  &kp SINGLE_QUOTE
-&kp AT         &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp LSHFT  &kp LCTRL      &kp LALT   &kp LEFT_WIN
-&kp CARET      &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp SEMI
+&kp BACKSLASH  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &trans     &kp GRAVE
+&kp AT         &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp QMARK  &kp SEMI       &kp EQUAL  &kp APOS
+&kp CARET      &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp MINUS
 &trans         &kp BACKSPACE  &kp TAB                                                                                    &trans         &trans     &trans
             >;
         };
