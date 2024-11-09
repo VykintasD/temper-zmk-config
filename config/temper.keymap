@@ -110,7 +110,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <95>;
+            require-prior-idle-ms = <45>;
             hold-trigger-key-positions = <32 33 34>;
         };
 
