@@ -95,10 +95,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <185>;
+            tapping-term-ms = <200>;
             hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
-            flavor = "hold-preferred";
-            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
         };
 
         layer_tap: layer_tap {
@@ -135,10 +136,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W          &kp F             &kp P  &kp B    &kp J  &kp L  &kp U               &kp Y               &kp EQUAL
-&kp A       &kp R          &kp S             &kp T  &kp G    &kp M  &kp N  &kp E               &kp I               &kp O
-&kp Z       &kp X          &kp C             &kp D  &kp V    &kp K  &kp H  &comma_semi         &dot_colon          &kp SLASH
-&caps_word  &kp BACKSPACE  &layer_tap 1 TAB                                &layer_tap 2 ENTER  &layer_tap 3 SPACE  &super_bspc
+&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &kp EQUAL
+&hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
+&kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &comma_semi         &dot_colon          &kp SLASH
+&caps_word       &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &super_bspc
             >;
         };
 
