@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define default_layer 0
@@ -141,7 +142,7 @@
 &kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &caps_word
 &hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
 &kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &kp COMMA           &kp PERIOD          &kp SLASH
-&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &none
+&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &bt BT_CLR_ALL
             >;
         };
 
