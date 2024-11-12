@@ -142,7 +142,7 @@
 &kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &caps_word
 &hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
 &kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &kp COMMA           &kp PERIOD          &kp SLASH
-&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &bt BT_CLR_ALL
+&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &none
             >;
         };
 
@@ -157,10 +157,10 @@
 
         nav_layer {
             bindings = <
-&trans        &trans         &kp ENTER        &trans          &trans     &trans      &kp HOME    &kp UP_ARROW  &kp END      &none
-&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &none       &kp LEFT    &kp DOWN      &kp RIGHT    &kp PAGE_UP
-&trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &kp DELETE  &kp K_COPY  &kp K_CUT     &kp K_PASTE  &kp PAGE_DOWN
-&trans        &kp BACKSPACE  &kp TAB                                                             &trans        &trans       &trans
+&kp ESC       &trans         &kp ENTER        &trans          &trans     &bt BT_CLR_ALL  &kp HOME       &kp UP_ARROW  &kp END         &none
+&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &none           &kp LEFT       &kp DOWN      &kp RIGHT       &kp PAGE_UP
+&trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &kp DELETE      &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_PASTE  &kp PAGE_DOWN
+&trans        &kp BACKSPACE  &kp TAB                                                                    &trans        &trans          &trans
             >;
         };
 
