@@ -95,7 +95,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             hold-trigger-key-positions = <13 12 11 10 16 17 18 19>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
@@ -139,10 +139,10 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U               &kp Y               &caps_word
-&hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E        &hrm LEFT_ALT I     &hrm LEFT_WIN O
-&kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &kp COMMA           &kp PERIOD          &kp SLASH
-&none            &kp BACKSPACE    &layer_tap 1 TAB                                                        &layer_tap 2 ENTER  &layer_tap 3 SPACE  &none
+&kp Q            &kp W            &kp F             &kp P              &kp B    &kp J  &kp L              &kp U         &kp Y            &caps_word
+&hrm LEFT_WIN A  &hrm LEFT_ALT R  &hrm LCTRL S      &hrm LEFT_SHIFT T  &kp G    &kp M  &hrm LEFT_SHIFT N  &hrm LCTRL E  &hrm LEFT_ALT I  &hrm LEFT_WIN O
+&kp Z            &kp X            &kp C             &kp D              &kp V    &kp K  &kp H              &kp COMMA     &kp PERIOD       &kp SLASH
+&mo 2            &kp BACKSPACE    &layer_tap 1 TAB                                                        &kp ENTER     &kp SPACE        &mo 3
             >;
         };
 
@@ -157,19 +157,19 @@
 
         nav_layer {
             bindings = <
-&kp ESC       &trans         &kp ENTER        &trans          &trans     &bt BT_CLR_ALL  &kp HOME       &kp UP_ARROW  &kp END         &none
-&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &none           &kp LEFT       &kp DOWN      &kp RIGHT       &kp PAGE_UP
-&trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &kp DELETE      &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_PASTE  &kp PAGE_DOWN
-&trans        &kp BACKSPACE  &kp TAB                                                                    &trans        &trans          &trans
+&kp ESC       &trans         &kp ENTER        &trans          &trans     &bt BT_CLR_ALL  &kp HOME   &kp UP_ARROW  &kp END    &none
+&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL        &kp LEFT_SHIFT  &kp TAB    &none           &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_UP
+&trans        &none          &kp LC(LS(TAB))  &kp LC(TAB)     &trans     &kp DELETE      &kp LC(C)  &kp LC(X)     &kp LC(V)  &kp PAGE_DOWN
+&trans        &kp BACKSPACE  &kp TAB                                                                &trans        &trans     &trans
             >;
         };
 
         sym_layer {
             bindings = <
-&kp BACKSLASH  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans   &kp LC(Z)  &kp LS(LC(Z))  &trans     &kp GRAVE
-&kp AT         &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &kp DEL  &kp QMARK  &kp SEMI       &kp EQUAL  &kp APOS
-&kp CARET      &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &trans   &trans     &trans         &trans     &kp MINUS
-&trans         &kp BACKSPACE  &kp TAB                                                                                    &trans         &trans     &trans
+&kp BACKSLASH  &kp PERCENT    &kp LEFT_BRACE        &kp RIGHT_BRACE                    &kp AMPS      &trans      &kp LC(Z)  &kp LS(LC(Z))  &kp PIPE        &kp GRAVE
+&kp AT         &kp ASTRK      &kp LEFT_PARENTHESIS  &hrm LEFT_SHIFT RIGHT_PARENTHESIS  &kp EXCL      &none       &kp QMARK  &kp SEMI       &kp EQUAL       &kp APOS
+&kp CARET      &kp HASH       &kp LBKT              &kp RBKT                           &kp DOLLAR    &kp DELETE  &trans     &kp COLON      &kp UNDERSCORE  &kp MINUS
+&trans         &kp BACKSPACE  &kp TAB                                                                                       &trans         &trans          &trans
             >;
         };
     };
