@@ -3,8 +3,13 @@
 This is my personal ZMK config for the [temper](https://github.com/raeedcho/temper).
 
 Some notes about this config:
-- Four main layers (default, numbers/symbols, navigation, and function)
-- Default layer is Colemak DHm, but there's also a QWERTY layer that can be toggled on
-- Navigation layer has vim-like arrow keys
+- Four main layers (default, numbers, symbols, and navigation)
+- Colemak DH
 
-![Temper Keymap](keymap_img/temper.svg)
+![Temper Keymap](keymap_img/default_layer.png)
+
+![Temper Keymap](keymap_img/nav_layer.png)
+
+![Temper Keymap](keymap_img/num_layer.png)
+
+![Temper Keymap](keymap_img/sym_layer.png)
